@@ -9,7 +9,7 @@ def fahrenheit_to_celsius():
     The best part? No tutorial! Yes!
     """
     fahr = ent_farhen.get() # Gets data
-    if fahr.isnumeric(): # Checks for numbers in string
+    if fahr.isnumeric() or float: # Checks for numbers in string
         celsius = (5 / 9) * (float(fahr) - 32)
         lbl_celsius_results["text"] = f"{round(celsius, 2)} \N{DEGREE CELSIUS}"
     else:
